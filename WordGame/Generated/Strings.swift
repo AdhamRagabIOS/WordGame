@@ -16,12 +16,16 @@ internal enum L10n {
   internal static func correctAttempts(_ p1: Int) -> String {
     return L10n.tr("Localizable", "correctAttempts", p1)
   }
+  /// Game Over
+  internal static let gameOver = L10n.tr("Localizable", "gameOver")
   /// Incorrect attempts: %d
   internal static func incorrectAttempts(_ p1: Int) -> String {
     return L10n.tr("Localizable", "incorrectAttempts", p1)
   }
   /// Cannot parse data
   internal static let parsingError = L10n.tr("Localizable", "parsingError")
+  /// The app will close now
+  internal static let theAppWillCloseTheApp = L10n.tr("Localizable", "theAppWillCloseTheApp")
   /// Wrong
   internal static let wrong = L10n.tr("Localizable", "wrong")
 }

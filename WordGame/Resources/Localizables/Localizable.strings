@@ -11,6 +11,8 @@
 "incorrectAttempts" = "Incorrect attempts: %d";
 "correct" = "Correct";
 "wrong" = "Wrong";
+"gameOver" = "Game Over";
+"theAppWillCloseTheApp" = "The app will close now";
 
 // Error Strings
 "parsingError" = "Cannot parse data";

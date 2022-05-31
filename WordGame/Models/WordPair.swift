@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A struct representing the WorPair JSON object.
 struct WordPair: Decodable, Equatable {
     let english: String
     let spanish: String

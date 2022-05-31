@@ -1,13 +1,14 @@
 //
-//  WordGameViewModel.swift
-//  WordGame
+//  MockViewModel.swift
+//  WordGameTests
 //
-//  Created by Adham Ragab on 29/05/2022.
+//  Created by Adham Ragab on 31/05/2022.
 //
 
 import Foundation
-import RxCocoa
 import RxSwift
+import RxCocoa
+@testable import WordGame
 
 protocol WordGameViewPresentable {
     var correctCount: BehaviorRelay<Int> { get set }
@@ -20,9 +21,8 @@ protocol WordGameViewPresentable {
     func evaluateAnswer(answer: Answer)
 }
 
-class WordGameViewModel: WordGameViewPresentable {
+class MockViewModel: WordGameViewPresentable {
 
-    // Constants
     enum Constants {
         static let questionsCount = 15
         static let maxIncorrectAttempts = 3
@@ -30,20 +30,17 @@ class WordGameViewModel: WordGameViewPresentable {
         static let questionTime = 5.0
     }
 
-    // Private variables
-    private var model: WordGameModelTransferable?
-    private var currentQuestionIndex: Int = .zero
-    private var timer: Timer?
-    private var disposeBag = DisposeBag()
+    var model: WordGameModelTransferable?
+    var currentQuestionIndex: Int = .zero
+    var timer: Timer?
+    var disposeBag = DisposeBag()
 
-    // Protocol observables
     var correctCount = BehaviorRelay<Int>(value: .zero)
     var incorrectCount = BehaviorRelay<Int>(value: .zero)
     var currentQuestion = BehaviorRelay<QuestionWord?>(value: nil)
     var shouldEndGame = BehaviorRelay<Bool>(value: false)
 
-    // Computed variables
-    private var questions = [QuestionWord]() {
+    var questions = [QuestionWord]() {
         didSet {
             currentQuestion.accept(questions.first)
         }
@@ -53,14 +50,12 @@ class WordGameViewModel: WordGameViewPresentable {
         self.model = model
     }
 
-    // Protocol functions
     func fetchWordPairs() {
         self.model?.fetchWordPairs().subscribe(onNext: { wordPairs in
             self.questions = self.processQuestions(wordPairs: wordPairs)
         }).disposed(by: self.disposeBag)
     }
 
-    ///Check whether the game should end or not, and start the timer if not
     func startTimer() {
         if !shouldEndGame.value {
             timer?.invalidate()
@@ -72,7 +67,6 @@ class WordGameViewModel: WordGameViewPresentable {
         }
     }
 
-    /// Check the enum value coming from the button and increment the attempts counter accordingly
     func evaluateAnswer(answer: Answer) {
         switch answer {
         case .correct:
@@ -86,10 +80,7 @@ class WordGameViewModel: WordGameViewPresentable {
         }
     }
 
-    // Private functions
-    /// Shuffle the WordPairs provided from the model
-    /// And Map it to the struct "QuestionWord" to add whether the pair has the correct translation or not.
-    private func processQuestions(wordPairs: [WordPair]) -> [QuestionWord] {
+    func processQuestions(wordPairs: [WordPair]) -> [QuestionWord] {
         let shufflingPrefix = wordPairs.shuffled().prefix(Constants.questionsCount)
         let numberOfCorrectQuestions = Constants.questionsCount / Constants.correctnessPercentage
         let shuffledQuestions: [QuestionWord] = shufflingPrefix.suffix(
@@ -111,7 +102,7 @@ class WordGameViewModel: WordGameViewPresentable {
         return (correctQuestions + shuffledQuestions).shuffled()
     }
 
-    private func incrementCorrectAnswers() {
+    func incrementCorrectAnswers() {
         if currentQuestionIndex < Constants.questionsCount {
             checkIfLastQuestion()
             correctCount.accept(correctCount.value + 1)
@@ -119,7 +110,7 @@ class WordGameViewModel: WordGameViewPresentable {
         }
     }
 
-   private func incrementIncorrectAnswers() {
+    func incrementIncorrectAnswers() {
         if currentQuestionIndex < Constants.questionsCount {
             checkforNumberOfIncorrect()
             checkIfLastQuestion()
@@ -128,7 +119,7 @@ class WordGameViewModel: WordGameViewPresentable {
         }
     }
 
-    private func checkforNumberOfIncorrect() {
+    func checkforNumberOfIncorrect() {
         incorrectCount.subscribe { count in
             if count.element == Constants.maxIncorrectAttempts {
                 self.endTheGame()
@@ -136,7 +127,7 @@ class WordGameViewModel: WordGameViewPresentable {
         }.disposed(by: disposeBag)
     }
 
-    private func checkIfLastQuestion() {
+    func checkIfLastQuestion() {
         if currentQuestionIndex < Constants.questionsCount - 1 {
             currentQuestionIndex += 1
         } else {
@@ -144,15 +135,14 @@ class WordGameViewModel: WordGameViewPresentable {
         }
     }
 
-    /// Go to next question by setting the observable "currentQuestion"
-    private func goToNextQuestion() {
+    func goToNextQuestion() {
         if currentQuestionIndex < Constants.questionsCount && !shouldEndGame.value {
             currentQuestion.accept(questions[currentQuestionIndex])
             startTimer()
         }
     }
 
-    private func endTheGame() {
+    func endTheGame() {
         timer?.invalidate()
         self.shouldEndGame.accept(true)
     }
