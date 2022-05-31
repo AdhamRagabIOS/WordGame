@@ -1,11 +1,11 @@
 # WordGame
 Babbel coding challenge
 
-* How much time was invested
+## How much time was invested
 
 8 hours were invested building the game, I used MVVM-C, RxSwift.
 
-* How was the time distributed (concept, model layer, view(s), game mechanics)
+## How was the time distributed (concept, model layer, view(s), game mechanics)
 
 - 1 hour setting up the project ( Creating project, SwiftLint, SwiftGen, localizableStrings).
 - 0.5 hour on layout.
@@ -16,7 +16,7 @@ Babbel coding challenge
 - 1 hour on adding unit tests + documentation
 
 
-* Decisions made to solve certain aspects of the game
+## Decisions made to solve certain aspects of the game
   
 - To solve the violation of Single Responsibility principle sometimes violated by MVVM, I used coordinator to make the viewController nothin but a dumb class that contains only the views.
 - Also, to solve the 25% correct answers, the WordPairs needed to be shuffled, so I used "processQuestions" method to shuffle questions to contain only 25% correct translation so if there are 15 pairs only 3 will be correct.
@@ -27,14 +27,14 @@ If the answer is incorrect, it will increase the incorrect counter and check whe
 - Adding the timer that will wait for 5 seconds, if no answer is provided, it will increment the incorrect counter and check for the max attempts or go to the next question.
 - A viewController Factory was created to create viewControllers on demand when the coordinator send to create a new ViewController.
 
-* Decisions made because of restricted time
+## Decisions made because of restricted time
 
 - ViewControllerFactory should be more generic, due to time constraint and the fact that the app is only one viewcontroller, I created it with the instance of the viewController used in the game.
 - I wanted to use builder pattern to initialize the viewModel for the VC, to reduce the coupling and make the viewModel unexposed to the viewController at all, but implementing this was a bit challenging so I used the normal way.
 - A better way to do the application is to use state driven architecture.
 - I wanted to add UITests but couldn't due to time constraint.
 
-* What would be the first thing to improve or add if there had been more time
+## What would be the first thing to improve or add if there had been more time
 
 - Fix problems mentions in the (Decisions made because of restricted time) section.
 - Add UITests.
