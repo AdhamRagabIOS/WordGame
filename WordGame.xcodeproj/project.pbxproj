@@ -3,18 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC83A92E2846676D00B8C9B0 /* WordGameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83A92D2846676D00B8C9B0 /* WordGameError.swift */; };
 		BC8D0E48284277B500FCD116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E47284277B500FCD116 /* AppDelegate.swift */; };
 		BC8D0E4A284277B500FCD116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E49284277B500FCD116 /* SceneDelegate.swift */; };
-		BC8D0E4C284277B500FCD116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E4B284277B500FCD116 /* ViewController.swift */; };
-		BC8D0E4F284277B500FCD116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0E4D284277B500FCD116 /* Main.storyboard */; };
 		BC8D0E51284277B600FCD116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0E50284277B600FCD116 /* Assets.xcassets */; };
 		BC8D0E54284277B600FCD116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0E52284277B600FCD116 /* LaunchScreen.storyboard */; };
 		BC8D0E5F284277B600FCD116 /* WordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E5E284277B600FCD116 /* WordGameTests.swift */; };
 		BC8D0E6A284277B600FCD116 /* WordGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E69284277B600FCD116 /* WordGameUITests.swift */; };
+		BC8D0E7A28427A7E00FCD116 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0E7928427A7E00FCD116 /* .swiftlint.yml */; };
+		BC8D0E892842811600FCD116 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0E882842811600FCD116 /* swiftgen.yml */; };
+		BC8D0E8B284282BD00FCD116 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0E8A284282BD00FCD116 /* Localizable.strings */; };
+		BC8D0E8D284282E500FCD116 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E8C284282E500FCD116 /* Strings.swift */; };
+		BC8D0E902842A47E00FCD116 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC8D0E8F2842A47E00FCD116 /* RxSwift */; };
+		BC8D0E942842A47E00FCD116 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BC8D0E932842A47E00FCD116 /* RxRelay */; };
+		BC8D0E962842A47E00FCD116 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BC8D0E952842A47E00FCD116 /* RxCocoa */; };
+		BC8D0E9928437E2800FCD116 /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9828437E2800FCD116 /* WordPair.swift */; };
+		BC8D0E9B28437E8500FCD116 /* Attempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9A28437E8500FCD116 /* Attempt.swift */; };
+		BC8D0E9D28437EB000FCD116 /* QuestionWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9C28437EB000FCD116 /* QuestionWord.swift */; };
+		BC8D0EA028437F9700FCD116 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9F28437F9700FCD116 /* ViewControllerFactory.swift */; };
+		BC8D0EA228437FA000FCD116 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EA128437FA000FCD116 /* Coordinator.swift */; };
+		BC8D0EA72843824200FCD116 /* WordGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EA62843824200FCD116 /* WordGameViewController.swift */; };
+		BC8D0EAB2843846800FCD116 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0EAA2843846800FCD116 /* Game.storyboard */; };
+		BC8D0EAD284384BC00FCD116 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EAC284384BC00FCD116 /* Storyboards.swift */; };
+		BC8D0EB0284393A700FCD116 /* WordGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EAF284393A700FCD116 /* WordGameCoordinator.swift */; };
+		BC8D0EB22843AA8B00FCD116 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0EB12843AA8B00FCD116 /* words.json */; };
+		BC8D0EB52843AACF00FCD116 /* WordsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EB42843AACF00FCD116 /* WordsLoader.swift */; };
+		BC8D0EB72843AAD800FCD116 /* WordsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EB62843AAD800FCD116 /* WordsParser.swift */; };
+		BC8D0EBA2843BF4500FCD116 /* WordGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EB92843BF4500FCD116 /* WordGameViewModel.swift */; };
+		BC99832A2843DACD005F46B4 /* WordGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9983292843DACD005F46B4 /* WordGameModel.swift */; };
+		BC99832D28440F28005F46B4 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC99832C28440F28005F46B4 /* HandySwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC83A92D2846676D00B8C9B0 /* WordGameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameError.swift; sourceTree = "<group>"; };
 		BC8D0E44284277B500FCD116 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D0E47284277B500FCD116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8D0E49284277B500FCD116 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC8D0E4B284277B500FCD116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC8D0E4E284277B500FCD116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC8D0E50284277B600FCD116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8D0E53284277B600FCD116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC8D0E55284277B600FCD116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +69,24 @@
 		BC8D0E65284277B600FCD116 /* WordGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D0E69284277B600FCD116 /* WordGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameUITests.swift; sourceTree = "<group>"; };
 		BC8D0E6B284277B600FCD116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC8D0E7928427A7E00FCD116 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		BC8D0E882842811600FCD116 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
+		BC8D0E8A284282BD00FCD116 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BC8D0E8C284282E500FCD116 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BC8D0E9828437E2800FCD116 /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
+		BC8D0E9A28437E8500FCD116 /* Attempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attempt.swift; sourceTree = "<group>"; };
+		BC8D0E9C28437EB000FCD116 /* QuestionWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionWord.swift; sourceTree = "<group>"; };
+		BC8D0E9F28437F9700FCD116 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		BC8D0EA128437FA000FCD116 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BC8D0EA62843824200FCD116 /* WordGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameViewController.swift; sourceTree = "<group>"; };
+		BC8D0EAA2843846800FCD116 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		BC8D0EAC284384BC00FCD116 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		BC8D0EAF284393A700FCD116 /* WordGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameCoordinator.swift; sourceTree = "<group>"; };
+		BC8D0EB12843AA8B00FCD116 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = words.json; path = ../../../Downloads/CodeChallengeiOS/words.json; sourceTree = "<group>"; };
+		BC8D0EB42843AACF00FCD116 /* WordsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsLoader.swift; sourceTree = "<group>"; };
+		BC8D0EB62843AAD800FCD116 /* WordsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsParser.swift; sourceTree = "<group>"; };
+		BC8D0EB92843BF4500FCD116 /* WordGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameViewModel.swift; sourceTree = "<group>"; };
+		BC9983292843DACD005F46B4 /* WordGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8D0E942842A47E00FCD116 /* RxRelay in Frameworks */,
+				BC8D0E962842A47E00FCD116 /* RxCocoa in Frameworks */,
+				BC8D0E902842A47E00FCD116 /* RxSwift in Frameworks */,
+				BC99832D28440F28005F46B4 /* HandySwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +141,16 @@
 		BC8D0E46284277B500FCD116 /* WordGame */ = {
 			isa = PBXGroup;
 			children = (
+				BC8D0EA32843821B00FCD116 /* Scenes */,
+				BC8D0E9E28437F8900FCD116 /* Coordinators */,
+				BC8D0EB32843AA9E00FCD116 /* Services */,
+				BC8D0E9728437E0F00FCD116 /* Models */,
+				BC8D0E8028427D2300FCD116 /* Generated */,
+				BC8D0E7D28427C5800FCD116 /* Resources */,
+				BC8D0E7828427A5600FCD116 /* RootFiles */,
+				BC8D0EB12843AA8B00FCD116 /* words.json */,
 				BC8D0E47284277B500FCD116 /* AppDelegate.swift */,
 				BC8D0E49284277B500FCD116 /* SceneDelegate.swift */,
-				BC8D0E4B284277B500FCD116 /* ViewController.swift */,
-				BC8D0E4D284277B500FCD116 /* Main.storyboard */,
 				BC8D0E50284277B600FCD116 /* Assets.xcassets */,
 				BC8D0E52284277B600FCD116 /* LaunchScreen.storyboard */,
 				BC8D0E55284277B600FCD116 /* Info.plist */,
@@ -128,6 +176,89 @@
 			path = WordGameUITests;
 			sourceTree = "<group>";
 		};
+		BC8D0E7828427A5600FCD116 /* RootFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0E882842811600FCD116 /* swiftgen.yml */,
+				BC8D0E7928427A7E00FCD116 /* .swiftlint.yml */,
+			);
+			path = RootFiles;
+			sourceTree = "<group>";
+		};
+		BC8D0E7D28427C5800FCD116 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0E7E28427C7C00FCD116 /* Localizables */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BC8D0E7E28427C7C00FCD116 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0E8A284282BD00FCD116 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		BC8D0E8028427D2300FCD116 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0EAC284384BC00FCD116 /* Storyboards.swift */,
+				BC8D0E8C284282E500FCD116 /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		BC8D0E9728437E0F00FCD116 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0E9828437E2800FCD116 /* WordPair.swift */,
+				BC8D0E9A28437E8500FCD116 /* Attempt.swift */,
+				BC8D0E9C28437EB000FCD116 /* QuestionWord.swift */,
+				BC83A92D2846676D00B8C9B0 /* WordGameError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC8D0E9E28437F8900FCD116 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0E9F28437F9700FCD116 /* ViewControllerFactory.swift */,
+				BC8D0EA128437FA000FCD116 /* Coordinator.swift */,
+				BC8D0EAF284393A700FCD116 /* WordGameCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		BC8D0EA32843821B00FCD116 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0EB82843BF2C00FCD116 /* WordGame */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BC8D0EB32843AA9E00FCD116 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0EB42843AACF00FCD116 /* WordsLoader.swift */,
+				BC8D0EB62843AAD800FCD116 /* WordsParser.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BC8D0EB82843BF2C00FCD116 /* WordGame */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D0EAA2843846800FCD116 /* Game.storyboard */,
+				BC8D0EA62843824200FCD116 /* WordGameViewController.swift */,
+				BC8D0EB92843BF4500FCD116 /* WordGameViewModel.swift */,
+				BC9983292843DACD005F46B4 /* WordGameModel.swift */,
+			);
+			path = WordGame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,12 +269,20 @@
 				BC8D0E40284277B500FCD116 /* Sources */,
 				BC8D0E41284277B500FCD116 /* Frameworks */,
 				BC8D0E42284277B500FCD116 /* Resources */,
+				BC8D0E772842793D00FCD116 /* SwiftLint */,
+				BC8D0E7F28427CD700FCD116 /* SwiftGen */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WordGame;
+			packageProductDependencies = (
+				BC8D0E8F2842A47E00FCD116 /* RxSwift */,
+				BC8D0E932842A47E00FCD116 /* RxRelay */,
+				BC8D0E952842A47E00FCD116 /* RxCocoa */,
+				BC99832C28440F28005F46B4 /* HandySwift */,
+			);
 			productName = WordGame;
 			productReference = BC8D0E44284277B500FCD116 /* WordGame.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +354,10 @@
 				Base,
 			);
 			mainGroup = BC8D0E3B284277B500FCD116;
+			packageReferences = (
+				BC8D0E8E2842A47E00FCD116 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BC99832B28440F28005F46B4 /* XCRemoteSwiftPackageReference "HandySwift" */,
+			);
 			productRefGroup = BC8D0E45284277B500FCD116 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +374,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8D0EAB2843846800FCD116 /* Game.storyboard in Resources */,
+				BC8D0E7A28427A7E00FCD116 /* .swiftlint.yml in Resources */,
+				BC8D0E8B284282BD00FCD116 /* Localizable.strings in Resources */,
 				BC8D0E54284277B600FCD116 /* LaunchScreen.storyboard in Resources */,
 				BC8D0E51284277B600FCD116 /* Assets.xcassets in Resources */,
-				BC8D0E4F284277B500FCD116 /* Main.storyboard in Resources */,
+				BC8D0E892842811600FCD116 /* swiftgen.yml in Resources */,
+				BC8D0EB22843AA8B00FCD116 /* words.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +400,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BC8D0E772842793D00FCD116 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		BC8D0E7F28427CD700FCD116 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"error: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC8D0E40284277B500FCD116 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8D0E4C284277B500FCD116 /* ViewController.swift in Sources */,
+				BC8D0E9D28437EB000FCD116 /* QuestionWord.swift in Sources */,
+				BC8D0EB0284393A700FCD116 /* WordGameCoordinator.swift in Sources */,
+				BC8D0E9928437E2800FCD116 /* WordPair.swift in Sources */,
 				BC8D0E48284277B500FCD116 /* AppDelegate.swift in Sources */,
+				BC99832A2843DACD005F46B4 /* WordGameModel.swift in Sources */,
+				BC8D0E9B28437E8500FCD116 /* Attempt.swift in Sources */,
+				BC8D0EA028437F9700FCD116 /* ViewControllerFactory.swift in Sources */,
+				BC8D0EB72843AAD800FCD116 /* WordsParser.swift in Sources */,
+				BC8D0EA72843824200FCD116 /* WordGameViewController.swift in Sources */,
+				BC8D0EBA2843BF4500FCD116 /* WordGameViewModel.swift in Sources */,
+				BC8D0EAD284384BC00FCD116 /* Storyboards.swift in Sources */,
+				BC8D0E8D284282E500FCD116 /* Strings.swift in Sources */,
 				BC8D0E4A284277B500FCD116 /* SceneDelegate.swift in Sources */,
+				BC8D0EB52843AACF00FCD116 /* WordsLoader.swift in Sources */,
+				BC83A92E2846676D00B8C9B0 /* WordGameError.swift in Sources */,
+				BC8D0EA228437FA000FCD116 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +495,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BC8D0E4D284277B500FCD116 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC8D0E4E284277B500FCD116 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BC8D0E52284277B600FCD116 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -593,6 +784,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC8D0E8E2842A47E00FCD116 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+		BC99832B28440F28005F46B4 /* XCRemoteSwiftPackageReference "HandySwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FlineDev/HandySwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC8D0E8F2842A47E00FCD116 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC8D0E8E2842A47E00FCD116 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BC8D0E932842A47E00FCD116 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC8D0E8E2842A47E00FCD116 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		BC8D0E952842A47E00FCD116 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC8D0E8E2842A47E00FCD116 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BC99832C28440F28005F46B4 /* HandySwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC99832B28440F28005F46B4 /* XCRemoteSwiftPackageReference "HandySwift" */;
+			productName = HandySwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC8D0E3C284277B500FCD116 /* Project object */;
 }

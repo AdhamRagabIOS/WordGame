@@ -1,0 +1,12 @@
+ib:
+  inputs:
+    - WordGame/Scenes
+  outputs:
+    - templateName: scenes-swift4
+      output: WordGame/Generated/Storyboards.swift
+strings:
+    inputs: WordGame/Resources/Localizables/Localizable.strings
+    filters: .+\.strings$
+    outputs:
+      templateName: structured-swift4
+      output: WordGame/Generated/Strings.swift

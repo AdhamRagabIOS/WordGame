@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  WordGame
+
+  Created by Adham Ragab on 28/05/2022.
+  
+*/
+
+// Game Strings
+"correctAttempts" = "Correct attempts: %d";
+"incorrectAttempts" = "Incorrect attempts: %d";
+"correct" = "Correct";
+"wrong" = "Wrong";
+
+// Error Strings
+"parsingError" = "Cannot parse data";
