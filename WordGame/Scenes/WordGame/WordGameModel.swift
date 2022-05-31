@@ -14,13 +14,19 @@ protocol WordGameModelTransferable {
 }
 
 class WordGameModel: WordGameModelTransferable {
-    var service: WordGameDataFetchable?
-    var disposeBag = DisposeBag()
 
+    // Protocol variables
+    var service: WordGameDataFetchable?
+
+    // Private variables
+    private var disposeBag = DisposeBag()
+
+    // Initializers
     init(service: WordGameDataFetchable = WordsLoader()) {
         self.service = service
     }
 
+    // Protocol methods
     func fetchWordPairs() -> Observable<[WordPair]> {
         return Observable.create { observer -> Disposable in
             self.service?.fetchWordPairs().subscribe(onNext: { wordPairs in

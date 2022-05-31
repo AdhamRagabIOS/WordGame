@@ -11,6 +11,12 @@ import RxCocoa
 
 class WordGameViewController: UIViewController {
 
+    // Constants
+    enum Constants {
+        static let closingTime = 5.0
+    }
+
+    // IBOutlets
     @IBOutlet private weak var correctLabel: UILabel!
     @IBOutlet private weak var incorrectLabel: UILabel!
     @IBOutlet private weak var englishWordLabel: UILabel!
@@ -18,9 +24,13 @@ class WordGameViewController: UIViewController {
     @IBOutlet private weak var correctButton: UIButton!
     @IBOutlet private weak var incorrectButton: UIButton!
 
+    // Protocol variables
     var viewModel: WordGameViewPresentable?
-    var disposeBag = DisposeBag()
 
+    // Private variables
+    private var disposeBag = DisposeBag()
+
+    // ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         initilaizeView()
@@ -29,17 +39,32 @@ class WordGameViewController: UIViewController {
         fetchWordPairs()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startTimer()
+    }
+
+    // Private functions
     private func fetchWordPairs() {
         viewModel?.fetchWordPairs()
     }
 
+    private func startTimer() {
+        viewModel?.startTimer()
+    }
+
     private func initilaizeView() {
         correctButton.setTitle(L10n.correct, for: .normal)
-        incorrectButton.setTitle(L10n.wrong, for: .normal)
+        correctButton.layer.borderWidth = 1
+        correctButton.layer.borderColor = UIColor.black.cgColor
         correctLabel.text = L10n.correctAttempts(.zero)
+        incorrectButton.setTitle(L10n.wrong, for: .normal)
+        incorrectButton.layer.borderWidth = 1
+        incorrectButton.layer.borderColor = UIColor.black.cgColor
         incorrectLabel.text = L10n.incorrectAttempts(.zero)
     }
 
+    /// Listen to Answer buttons and bind it to the Answer enum.
     private func bindButtonsAnswers() {
         Observable.merge(
             correctButton.rx.tap.map { _ in Answer.correct },
@@ -49,11 +74,13 @@ class WordGameViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
 
+    /// Add all bindings and observables.
     private func bindDataToView() {
         setEnglishWord()
         setSpanishWord()
         setCorrectCounter()
         setIncorrectCounter()
+        binEndingGame()
     }
 
     private func setEnglishWord() {
@@ -78,5 +105,27 @@ class WordGameViewController: UIViewController {
         viewModel?.incorrectCount.subscribe(onNext: { count in
             self.incorrectLabel.text = L10n.incorrectAttempts(count)
         }).disposed(by: disposeBag)
+    }
+
+    private func binEndingGame() {
+        viewModel?.shouldEndGame.subscribe(onNext: { shouldEndGame in
+            if shouldEndGame {
+                self.closeTheApp()
+            }
+        }).disposed(by: disposeBag)
+    }
+
+    /// Show alert to inform that the game ended and the app will close.
+    private func closeTheApp() {
+        let alert = UIAlertController(
+            title: L10n.gameOver,
+            message: L10n.theAppWillCloseTheApp,
+            preferredStyle: UIAlertController.Style.alert
+        )
+        self.present(alert, animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.closingTime) {
+                exit(-1)
+            }
+        }
     }
 }

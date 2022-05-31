@@ -22,7 +22,9 @@
                                     <constraint firstAttribute="width" constant="160" id="5LR-Mx-q2U"/>
                                     <constraint firstAttribute="height" constant="90" id="lDy-Wd-sqW"/>
                                 </constraints>
-                                <state key="normal" title="Correct"/>
+                                <state key="normal" title="Correct">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-OV-cC6">
                                 <rect key="frame" x="654" y="1055" width="160" height="90"/>
@@ -30,7 +32,9 @@
                                     <constraint firstAttribute="width" constant="160" id="C7j-go-jvw"/>
                                     <constraint firstAttribute="height" constant="90" id="FvY-pa-imM"/>
                                 </constraints>
-                                <state key="normal" title="Wrong"/>
+                                <state key="normal" title="Wrong">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9f2-VS-XbM">
                                 <rect key="frame" x="20" y="219" width="794" height="736"/>
@@ -99,6 +103,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

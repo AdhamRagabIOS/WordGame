@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC83A92E2846676D00B8C9B0 /* WordGameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83A92D2846676D00B8C9B0 /* WordGameError.swift */; };
+		BC83A9342846A9ED00B8C9B0 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83A9332846A9ED00B8C9B0 /* MockViewModel.swift */; };
 		BC8D0E48284277B500FCD116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E47284277B500FCD116 /* AppDelegate.swift */; };
 		BC8D0E4A284277B500FCD116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E49284277B500FCD116 /* SceneDelegate.swift */; };
 		BC8D0E51284277B600FCD116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8D0E50284277B600FCD116 /* Assets.xcassets */; };
@@ -22,7 +23,6 @@
 		BC8D0E942842A47E00FCD116 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BC8D0E932842A47E00FCD116 /* RxRelay */; };
 		BC8D0E962842A47E00FCD116 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BC8D0E952842A47E00FCD116 /* RxCocoa */; };
 		BC8D0E9928437E2800FCD116 /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9828437E2800FCD116 /* WordPair.swift */; };
-		BC8D0E9B28437E8500FCD116 /* Attempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9A28437E8500FCD116 /* Attempt.swift */; };
 		BC8D0E9D28437EB000FCD116 /* QuestionWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9C28437EB000FCD116 /* QuestionWord.swift */; };
 		BC8D0EA028437F9700FCD116 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0E9F28437F9700FCD116 /* ViewControllerFactory.swift */; };
 		BC8D0EA228437FA000FCD116 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D0EA128437FA000FCD116 /* Coordinator.swift */; };
@@ -57,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		BC83A92D2846676D00B8C9B0 /* WordGameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameError.swift; sourceTree = "<group>"; };
+		BC83A9332846A9ED00B8C9B0 /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
 		BC8D0E44284277B500FCD116 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D0E47284277B500FCD116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8D0E49284277B500FCD116 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		BC8D0E8A284282BD00FCD116 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BC8D0E8C284282E500FCD116 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BC8D0E9828437E2800FCD116 /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
-		BC8D0E9A28437E8500FCD116 /* Attempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attempt.swift; sourceTree = "<group>"; };
 		BC8D0E9C28437EB000FCD116 /* QuestionWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionWord.swift; sourceTree = "<group>"; };
 		BC8D0E9F28437F9700FCD116 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		BC8D0EA128437FA000FCD116 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -118,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC83A9322846A9E300B8C9B0 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				BC83A9332846A9ED00B8C9B0 /* MockViewModel.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
 		BC8D0E3B284277B500FCD116 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +169,7 @@
 		BC8D0E5D284277B600FCD116 /* WordGameTests */ = {
 			isa = PBXGroup;
 			children = (
+				BC83A9322846A9E300B8C9B0 /* MockData */,
 				BC8D0E5E284277B600FCD116 /* WordGameTests.swift */,
 				BC8D0E60284277B600FCD116 /* Info.plist */,
 			);
@@ -214,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				BC8D0E9828437E2800FCD116 /* WordPair.swift */,
-				BC8D0E9A28437E8500FCD116 /* Attempt.swift */,
 				BC8D0E9C28437EB000FCD116 /* QuestionWord.swift */,
 				BC83A92D2846676D00B8C9B0 /* WordGameError.swift */,
 			);
@@ -449,7 +457,6 @@
 				BC8D0E9928437E2800FCD116 /* WordPair.swift in Sources */,
 				BC8D0E48284277B500FCD116 /* AppDelegate.swift in Sources */,
 				BC99832A2843DACD005F46B4 /* WordGameModel.swift in Sources */,
-				BC8D0E9B28437E8500FCD116 /* Attempt.swift in Sources */,
 				BC8D0EA028437F9700FCD116 /* ViewControllerFactory.swift in Sources */,
 				BC8D0EB72843AAD800FCD116 /* WordsParser.swift in Sources */,
 				BC8D0EA72843824200FCD116 /* WordGameViewController.swift in Sources */,
@@ -467,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC83A9342846A9ED00B8C9B0 /* MockViewModel.swift in Sources */,
 				BC8D0E5F284277B600FCD116 /* WordGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ protocol WordGameDataFetchable {
     func fetchWordPairs() -> Observable<[WordPair]>
 }
 
+/// A struct responsible for fetching the WordPairs.
 struct WordsLoader: WordGameDataFetchable {
     func fetchWordPairs() -> Observable<[WordPair]> {
         let fileName = "words.json"

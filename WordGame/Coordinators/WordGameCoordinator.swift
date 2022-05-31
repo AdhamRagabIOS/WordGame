@@ -8,6 +8,7 @@
 import UIKit
 import HandySwift
 
+/// A coordinator protocol for creating and initializing WordGameViewController.
 struct WordGameCoordinator: Coordinator {
     internal var viewControllerFactory: ViewControllerFactory?
     internal var navigationController: UINavigationController?
